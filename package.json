@@ -1,0 +1,36 @@
+{
+  "name": "@strapi/plugin-open-ai",
+  "version": "0.0.0",
+  "description": "The official plugin that allows you to create Open AI completion from a prompt",
+  "strapi": {
+    "name": "open-ai",
+    "description": "The official plugin that allows you to create Open AI completion from a prompt",
+    "kind": "plugin",
+    "displayName": "Open AI"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "Strapi Solutions SAS",
+    "email": "hi@strapi.io",
+    "url": "https://strapi.io"
+  },
+  "maintainers": [
+    {
+      "name": "Strapi Solutions SAS",
+      "email": "hi@strapi.io",
+      "url": "https://strapi.io"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strapi/strapi-plugin-open-ai.git"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
