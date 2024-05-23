@@ -1,6 +1,6 @@
 {
   "name": "@strapi/plugin-open-ai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The official plugin that allows you to create Open AI completion from a prompt",
   "strapi": {
     "name": "open-ai",
