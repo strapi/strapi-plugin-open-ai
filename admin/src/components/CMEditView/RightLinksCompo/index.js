@@ -126,13 +126,15 @@ const RightLinksCompo = () => {
 
   const handlePromptSubmit = () => {
     if (model && prompt && temperature && maxTokens) {
+      const messages = [{ role: 'user', content: prompt }];
       setGenerateCompletionText('Generating completion...');
       completionAPI
-        .create({ model, prompt, temperature, maxTokens })
+        .create({ model, messages, temperature, maxTokens })
         .then((data) => {
-          console.log(data);
           setCompletion(data?.choices[0]?.text.trim());
           setFinishReason(data?.choices[0]?.finish_reason);
+        })
+        .finally(() => {
           setGenerateCompletionText('Generate');
         });
     }
@@ -242,10 +244,7 @@ const RightLinksCompo = () => {
                           paddingLeft={4}
                           background="neutral0"
                         >
-                          <Button
-                            paddingTop={4}
-                            onClick={() => handlePromptSubmit()}
-                          >
+                          <Button onClick={() => handlePromptSubmit()}>
                             {generateCompletionText}
                           </Button>
                         </Box>
